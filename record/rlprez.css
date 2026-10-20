@@ -1,0 +1,124 @@
+/*!
+ * Copyright (c) Atomi Systems, Inc. All rights reserved.
+ * Version: 10.6.2
+ * Date: 2026.10.15
+ * Source Hash: 159a697f53d9b3183378fd5f9ba9bd695fd431ecbe0d763892d0ce623cd47991
+ */
+#lqMz5QfJ .ap-focused {
+	outline: 1px dashed black;
+	outline-offset: 1px;
+}
+#lqMz5QfJ p {
+	margin: 0;
+}
+#lqMz5QfJ ol,ul {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+#lqMz5QfJ {
+	-webkit-tap-highlight-color: transparent;
+}
+
+
+.ap-correct-values-dropbtn:hover {
+  background-color: #ddd;
+}
+.ap-correct-values-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.ap-correct-values-dropdown-content {
+  display: none;
+  position: absolute;
+  color: black;
+  background-color: #f1f1f1;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.ap-correct-values-dropdown-content li
+{
+  color: black;
+  padding: 4px 4px;
+  cursor: auto;
+}
+.ap-correct-values-dropdown-content li:hover {
+  background-color: #ddd;
+}
+.ap-correct-values-dropdown:hover .ap-correct-values-dropdown-content {
+  min-width: 100px;
+}
+.ap-correct-values-dropdown:hover{
+  background-color: #ddd;
+}
+
+
+/* Hotspot animation */
+@keyframes pulsate {
+	0% {
+		transform: scale(1);
+		opacity: 0.8;
+	}
+	45% {
+		transform: scale(1.75);
+		opacity: 0;
+	}
+}
+
+.ap-hotspot {
+	position: absolute;
+	transition: all .3s ease;
+	cursor: pointer;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.ap-hotspot .hs-ring {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: 1px solid;
+	margin: -1px auto auto -1px;
+	opacity: 0;
+	pointer-events: none;
+	animation: pulsate 3s ease-out infinite;
+}
+
+.ap-hotspot:hover .hs-ring {
+	animation: none;
+}
+
+
+table, th, td {
+	border-collapse: collapse;
+}
+
+/* Imported paragraph markers have independent paint, size and hanging position. */
+#lqMz5QfJ li[style*="--ap-hanging-indent:1"] {
+	text-indent: 0 !important;
+	position: relative;
+}
+#lqMz5QfJ li {
+	/* A child list keeps its own punctuation instead of inheriting its parent marker. */
+	--ap-numbering-marker: initial;
+}
+#lqMz5QfJ li::marker {
+	content: var(--ap-numbering-marker, normal);
+	color: var(--ap-bullet-color, inherit);
+	font-size: var(--ap-bullet-size, 1em);
+}
+#lqMz5QfJ li[style*="--ap-bullet-picture:"] {
+	list-style: none;
+}
+#lqMz5QfJ li[style*="--ap-bullet-picture:"]::before {
+	content: "";
+	position: absolute;
+	left: var(--ap-bullet-offset, -1em);
+	top: 0.15em;
+	width: calc(var(--ap-bullet-size, 1em) * 0.7);
+	height: calc(var(--ap-bullet-size, 1em) * 0.7);
+	background: var(--ap-bullet-picture) center / contain no-repeat;
+}
